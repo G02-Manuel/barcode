@@ -3,9 +3,12 @@
 
     <div t-name="stock_barcode.MainMenu" class="o_stock_barcode_main_menu_container o_home_menu_background" owl="1">
         <div class="o_stock_barcode_main_menu position-relative bg-view">
-            <a href="#" class="o_stock_barcode_menu d-block float-start" t-on-click.stop="() => this.setOpenState(!state.open,true)">
+            <a href="#" class="o_stock_barcode_menu d-block float-start" t-on-click="() => this.setOpenState(true)">
                 <i class="fa fa-chevron-left"/>
             </a>
+            <div t-if="state.open" class="dropdown-menu-custom">
+                <t t-slot="default" />
+            </div>
             <h1 class="mb-4">Barcode Scanning</h1>
 
             <div t-if="state.displayDemoMessage" class="message_demo_barcodes alert alert-info alert-dismissible text-start" role="status">
