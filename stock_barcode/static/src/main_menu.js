@@ -14,7 +14,7 @@ export class MainMenu extends Component {
         const user = useService('user');
         this.actionService = useService('action');
         this.dialogService = useService('dialog');
-        this.home = useService("home_menu");
+        this.home = useService("menu");
         this.notificationService = useService("notification");
         this.rpc = useService('rpc');
         this.state = useState({ displayDemoMessage });
